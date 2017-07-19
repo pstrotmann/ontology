@@ -1,0 +1,820 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://org.strotmann.ontologies.partner#"
+     xml:base="http://org.strotmann.ontologies.partner"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://org.strotmann.ontologies.partner"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#gehoertZu -->
+
+    <owl:ObjectProperty rdf:about="http://org.strotmann.ontologies.partner#gehoertZu">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#hat -->
+
+    <owl:ObjectProperty rdf:about="http://org.strotmann.ontologies.partner#hat"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#KommunikationProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://org.strotmann.ontologies.partner#KommunikationProperties"/>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#adresseProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://org.strotmann.ontologies.partner#adresseProperties"/>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#anwahl -->
+
+    <owl:DatatypeProperty rdf:about="http://org.strotmann.ontologies.partner#anwahl">
+        <rdfs:subPropertyOf rdf:resource="http://org.strotmann.ontologies.partner#KommunikationProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#bankverbindungProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://org.strotmann.ontologies.partner#bankverbindungProperties"/>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#bic -->
+
+    <owl:DatatypeProperty rdf:about="http://org.strotmann.ontologies.partner#bic">
+        <rdfs:subPropertyOf rdf:resource="http://org.strotmann.ontologies.partner#bankverbindungProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#geburtsdatum -->
+
+    <owl:DatatypeProperty rdf:about="http://org.strotmann.ontologies.partner#geburtsdatum">
+        <rdfs:subPropertyOf rdf:resource="http://org.strotmann.ontologies.partner#personProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#hausnummer -->
+
+    <owl:DatatypeProperty rdf:about="http://org.strotmann.ontologies.partner#hausnummer">
+        <rdfs:subPropertyOf rdf:resource="http://org.strotmann.ontologies.partner#adresseProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#hausnummerZusatz -->
+
+    <owl:DatatypeProperty rdf:about="http://org.strotmann.ontologies.partner#hausnummerZusatz">
+        <rdfs:subPropertyOf rdf:resource="http://org.strotmann.ontologies.partner#adresseProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#iban -->
+
+    <owl:DatatypeProperty rdf:about="http://org.strotmann.ontologies.partner#iban">
+        <rdfs:subPropertyOf rdf:resource="http://org.strotmann.ontologies.partner#bankverbindungProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#name -->
+
+    <owl:DatatypeProperty rdf:about="http://org.strotmann.ontologies.partner#name">
+        <rdfs:subPropertyOf rdf:resource="http://org.strotmann.ontologies.partner#partnerProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#organisationProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://org.strotmann.ontologies.partner#organisationProperties"/>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#ort -->
+
+    <owl:DatatypeProperty rdf:about="http://org.strotmann.ontologies.partner#ort">
+        <rdfs:subPropertyOf rdf:resource="http://org.strotmann.ontologies.partner#adresseProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#partnerProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://org.strotmann.ontologies.partner#partnerProperties"/>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#personProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://org.strotmann.ontologies.partner#personProperties"/>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#postleitzahl -->
+
+    <owl:DatatypeProperty rdf:about="http://org.strotmann.ontologies.partner#postleitzahl">
+        <rdfs:subPropertyOf rdf:resource="http://org.strotmann.ontologies.partner#adresseProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#strasse -->
+
+    <owl:DatatypeProperty rdf:about="http://org.strotmann.ontologies.partner#strasse">
+        <rdfs:subPropertyOf rdf:resource="http://org.strotmann.ontologies.partner#adresseProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#vorname -->
+
+    <owl:DatatypeProperty rdf:about="http://org.strotmann.ontologies.partner#vorname">
+        <rdfs:subPropertyOf rdf:resource="http://org.strotmann.ontologies.partner#personProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Adresse -->
+
+    <owl:Class rdf:about="http://org.strotmann.ontologies.partner#Adresse">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://org.strotmann.ontologies.partner#hausnummer"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://org.strotmann.ontologies.partner#ort"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://org.strotmann.ontologies.partner#postleitzahl"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://org.strotmann.ontologies.partner#strasse"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://org.strotmann.ontologies.partner#hausnummerZusatz"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://org.strotmann.ontologies.partner#Bankverbindung"/>
+        <owl:disjointWith rdf:resource="http://org.strotmann.ontologies.partner#Kommunikation"/>
+        <owl:disjointWith rdf:resource="http://org.strotmann.ontologies.partner#Partner"/>
+    </owl:Class>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Bankverbindung -->
+
+    <owl:Class rdf:about="http://org.strotmann.ontologies.partner#Bankverbindung">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://org.strotmann.ontologies.partner#gehoertZu"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://org.strotmann.ontologies.partner#Partner"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://org.strotmann.ontologies.partner#iban"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://org.strotmann.ontologies.partner#bic"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://org.strotmann.ontologies.partner#Kommunikation"/>
+        <owl:disjointWith rdf:resource="http://org.strotmann.ontologies.partner#Partner"/>
+    </owl:Class>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Branche -->
+
+    <owl:Class rdf:about="http://org.strotmann.ontologies.partner#Branche">
+        <rdfs:subClassOf rdf:resource="http://org.strotmann.ontologies.partner#ValueClasses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Geschlecht -->
+
+    <owl:Class rdf:about="http://org.strotmann.ontologies.partner#Geschlecht">
+        <rdfs:subClassOf rdf:resource="http://org.strotmann.ontologies.partner#ValueClasses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Kommunikation -->
+
+    <owl:Class rdf:about="http://org.strotmann.ontologies.partner#Kommunikation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://org.strotmann.ontologies.partner#gehoertZu"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://org.strotmann.ontologies.partner#Partner"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://org.strotmann.ontologies.partner#hat"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://org.strotmann.ontologies.partner#Kommunikationstyp"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://org.strotmann.ontologies.partner#anwahl"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://org.strotmann.ontologies.partner#Partner"/>
+    </owl:Class>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Kommunikationstyp -->
+
+    <owl:Class rdf:about="http://org.strotmann.ontologies.partner#Kommunikationstyp">
+        <rdfs:subClassOf rdf:resource="http://org.strotmann.ontologies.partner#ValueClasses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Organisation -->
+
+    <owl:Class rdf:about="http://org.strotmann.ontologies.partner#Organisation">
+        <rdfs:subClassOf rdf:resource="http://org.strotmann.ontologies.partner#Partner"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://org.strotmann.ontologies.partner#hat"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://org.strotmann.ontologies.partner#Branche"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://org.strotmann.ontologies.partner#hat"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://org.strotmann.ontologies.partner#Rechtsform"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://org.strotmann.ontologies.partner#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Partner -->
+
+    <owl:Class rdf:about="http://org.strotmann.ontologies.partner#Partner">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://org.strotmann.ontologies.partner#Organisation"/>
+                    <rdf:Description rdf:about="http://org.strotmann.ontologies.partner#Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://org.strotmann.ontologies.partner#hat"/>
+                <owl:someValuesFrom rdf:resource="http://org.strotmann.ontologies.partner#Bankverbindung"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://org.strotmann.ontologies.partner#hat"/>
+                <owl:someValuesFrom rdf:resource="http://org.strotmann.ontologies.partner#Kommunikation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://org.strotmann.ontologies.partner#hat"/>
+                <owl:someValuesFrom rdf:resource="http://org.strotmann.ontologies.partner#Rolle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://org.strotmann.ontologies.partner#hat"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://org.strotmann.ontologies.partner#Adresse"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://org.strotmann.ontologies.partner#name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://org.strotmann.ontologies.partner#ValueClasses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Person -->
+
+    <owl:Class rdf:about="http://org.strotmann.ontologies.partner#Person">
+        <rdfs:subClassOf rdf:resource="http://org.strotmann.ontologies.partner#Partner"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://org.strotmann.ontologies.partner#hat"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://org.strotmann.ontologies.partner#Geschlecht"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://org.strotmann.ontologies.partner#vorname"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://org.strotmann.ontologies.partner#geburtsdatum"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Rechtsform -->
+
+    <owl:Class rdf:about="http://org.strotmann.ontologies.partner#Rechtsform">
+        <rdfs:subClassOf rdf:resource="http://org.strotmann.ontologies.partner#ValueClasses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Rolle -->
+
+    <owl:Class rdf:about="http://org.strotmann.ontologies.partner#Rolle">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://org.strotmann.ontologies.partner#gehoertZu"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://org.strotmann.ontologies.partner#Partner"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://org.strotmann.ontologies.partner#hat"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://org.strotmann.ontologies.partner#Rollenname"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Rollenname -->
+
+    <owl:Class rdf:about="http://org.strotmann.ontologies.partner#Rollenname">
+        <rdfs:subClassOf rdf:resource="http://org.strotmann.ontologies.partner#ValueClasses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#ValueClasses -->
+
+    <owl:Class rdf:about="http://org.strotmann.ontologies.partner#ValueClasses"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Angestellter -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Angestellter">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Rollenname"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Ansprechpartner -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Ansprechpartner">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Rollenname"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Anspruchsteller -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Anspruchsteller">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Rollenname"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Auftraggeber -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Auftraggeber">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Rollenname"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Auftragnehmer -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Auftragnehmer">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Rollenname"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Beitragszahler -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Beitragszahler">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Rollenname"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Bergbau -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Bergbau">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Branche"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Besteller -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Besteller">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Rollenname"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Bewerber -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Bewerber">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Rollenname"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Dozent -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Dozent">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Rollenname"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Fax -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Fax">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Kommunikationstyp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Festnetz -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Festnetz">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Kommunikationstyp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Finanzwesen -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Finanzwesen">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Branche"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Frau -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Frau">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Geschlecht"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Geschädigter -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Geschädigter">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Rollenname"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#GmbH -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#GmbH">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Rechtsform"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Gutachter -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Gutachter">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Rollenname"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Handel -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Handel">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Branche"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Informationstechnik -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Informationstechnik">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Branche"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Kontoinhaber -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Kontoinhaber">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Rollenname"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Kreditnehmer -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Kreditnehmer">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Rollenname"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Kunde -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Kunde">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Rollenname"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Käufer -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Käufer">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Rollenname"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Lieferant -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Lieferant">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Rollenname"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Mann -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Mann">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Geschlecht"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Medien -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Medien">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Branche"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Mieter -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Mieter">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Rollenname"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Mobilphone -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Mobilphone">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Kommunikationstyp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Patient -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Patient">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Rollenname"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Student -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Student">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Rollenname"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Transport -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Transport">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Branche"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#TwitterAccount -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#TwitterAccount">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Kommunikationstyp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Verkäufer -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Verkäufer">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Rollenname"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Vermieter -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Vermieter">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Rollenname"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Versorgung -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Versorgung">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Branche"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Vertreter -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Vertreter">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Rollenname"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Webseite -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Webseite">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Kommunikationstyp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#Zahlungsempfänger -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Zahlungsempfänger">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Rollenname"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#e.V. -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#e.V.">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Rechtsform"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#eMail -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#eMail">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Kommunikationstyp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#oHG -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#oHG">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Rechtsform"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#verletzte_Person -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#verletzte_Person">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Rollenname"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#versicherte_Person -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#versicherte_Person">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Rollenname"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#GmbH&amp;CO_KG -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#GmbH&amp;CO_KG">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Rechtsform"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

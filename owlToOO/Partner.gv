@@ -1,0 +1,20 @@
+digraph hierarchy {
+size=10
+ratio = 0.5
+node[shape=record,style=filled,fillcolor=gray95]
+edge[arrowhead=empty]
+graph [size=10, ranksep=1.0, nodesep=1.0, overlap=false]
+1[label = "{Partner|name:string\n |}"]
+2[label = "{Rolle|Rollenname:string\n |CheckRollenname:boolean\n }"]
+3[label = "{Kommunikation|anwahl:string\n Kommunikationstyp:string\n |CheckKommunikationstyp:boolean\n }"]
+4[label = "{Organisation|Branche:string\n Rechtsform:string\n |CheckBranche:boolean\n CheckRechtsform:boolean\n }"]
+5[label = "{Person|vorname:string\n geburtsdatum:dateTime\n Geschlecht:string\n |CheckGeschlecht:boolean\n }"]
+6[label = "{Adresse|postleitzahl:integer\n ort:string\n strasse:string\n hausnummer:integer\n hausnummerZusatz:string\n |}"]
+7[label = "{Bankverbindung|iban:string\n bic:string\n |}"]
+6->1[arrowhead=none,arrowtail=none, headlabel="0..n", taillabel="0..1"]
+2->1[arrowhead=none,arrowtail=none, headlabel="1", taillabel="0..n"]
+3->1[arrowhead=none,arrowtail=none, headlabel="1", taillabel="0..n"]
+4->1
+5->1
+7->1[arrowhead=none,arrowtail=none, headlabel="1", taillabel="0..n"]
+}
