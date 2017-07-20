@@ -5,7 +5,7 @@ class Kommunikation  {
     String kommunikationstyp
     static constraints = {
       anwahl()
-      kommunikationstyp(inList:['Festnetz', 'Mobilphone', 'TwitterAccount', 'Fax', 'eMail', 'Webseite'],nullable:true)
+      kommunikationstyp(inList:['Fax', 'Festnetz', 'Mobilphone', 'TwitterAccount', 'Webseite', 'eMail'],nullable:true)
     }
     String toString() {"${this.anwahl } ${this.kommunikationstyp }     "}
 }

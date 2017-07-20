@@ -463,7 +463,7 @@ class GenDomsController {
 			if(norm(oA.getClassesInSignature()[0]).equals(wKlasse))
 				retWerte << norm(oA.getIndividualsInSignature()[0])
 		}
-		retWerte
+		retWerte.sort()
 	}
 	
 	private BufferedWriter groovyFile (String objName) {

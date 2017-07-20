@@ -3,7 +3,7 @@ class Rolle  {
     static belongsTo = [partner:Partner]
     String rollenname
     static constraints = {
-      rollenname(inList:['Student', 'Besteller', 'Kreditnehmer', 'Kontoinhaber', 'Angestellter', 'Zahlungsempfänger', 'Mieter', 'Kunde', 'Auftragnehmer', 'Geschädigter', 'Lieferant', 'Patient', 'Vertreter', 'verletzte_Person', 'Käufer', 'Verkäufer', 'Gutachter', 'Dozent', 'Ansprechpartner', 'Vermieter', 'Bewerber', 'Beitragszahler', 'Anspruchsteller', 'Auftraggeber', 'versicherte_Person'],nullable:true)
+      rollenname(inList:['Angestellter', 'Ansprechpartner', 'Anspruchsteller', 'Antragsteller', 'Auftraggeber', 'Auftragnehmer', 'Beitragszahler', 'Besteller', 'Bewerber', 'Dozent', 'Geschädigter', 'Gutachter', 'Kontoinhaber', 'Kreditnehmer', 'Kunde', 'Käufer', 'Lieferant', 'Mieter', 'Patient', 'Student', 'Verkäufer', 'Vermieter', 'Vertreter', 'Zahlungsempfänger', 'verletzte_Person', 'versicherte_Person'],nullable:true)
     }
     String toString() {"${this.rollenname }     "}
 }

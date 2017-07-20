@@ -487,6 +487,14 @@
     
 
 
+    <!-- http://org.strotmann.ontologies.partner#Antragsteller -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Antragsteller">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Rollenname"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://org.strotmann.ontologies.partner#Auftraggeber -->
 
     <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Auftraggeber">
