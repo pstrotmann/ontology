@@ -2,21 +2,21 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: personInstance, field: 'adresse', 'error')} ">
-	<label for="adresse">
-		<g:message code="person.adresse.label" default="Adresse" />
-		
-	</label>
-	<g:select id="adresse" name="adresse.id" from="${org.strotmann.ontologies.partner.Adresse.list()}" optionKey="id" value="${personInstance?.adresse?.id}" class="many-to-one" noSelection="['null': '']"/>
-
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: personInstance, field: 'name', 'error')} required">
 	<label for="name">
 		<g:message code="person.name.label" default="Name" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:textField name="name" required="" value="${personInstance?.name}"/>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: personInstance, field: 'adresse', 'error')} ">
+	<label for="adresse">
+		<g:message code="person.adresse.label" default="Adresse" />
+		
+	</label>
+	<g:select id="adresse" name="adresse.id" from="${org.strotmann.ontologies.partner.Adresse.list()}" optionKey="id" value="${personInstance?.adresse?.id}" class="many-to-one" noSelection="['null': '']"/>
 
 </div>
 

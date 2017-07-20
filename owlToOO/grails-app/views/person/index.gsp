@@ -24,9 +24,9 @@
 			<thead>
 					<tr>
 					
-						<th><g:message code="person.adresse.label" default="Adresse" /></th>
-					
 						<g:sortableColumn property="name" title="${message(code: 'person.name.label', default: 'Name')}" />
+					
+						<th><g:message code="person.adresse.label" default="Adresse" /></th>
 					
 						<g:sortableColumn property="vorname" title="${message(code: 'person.vorname.label', default: 'Vorname')}" />
 					
@@ -40,9 +40,9 @@
 				<g:each in="${personInstanceList}" status="i" var="personInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${personInstance.id}">${fieldValue(bean: personInstance, field: "adresse")}</g:link></td>
+						<td><g:link action="show" id="${personInstance.id}">${fieldValue(bean: personInstance, field: "name")}</g:link></td>
 					
-						<td>${fieldValue(bean: personInstance, field: "name")}</td>
+						<td>${fieldValue(bean: personInstance, field: "adresse")}</td>
 					
 						<td>${fieldValue(bean: personInstance, field: "vorname")}</td>
 					
