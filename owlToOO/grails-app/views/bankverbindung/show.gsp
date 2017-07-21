@@ -44,9 +44,12 @@
 				<g:if test="${bankverbindungInstance?.partner}">
 				<li class="fieldcontain">
 					<span id="partner-label" class="property-label"><g:message code="bankverbindung.partner.label" default="Partner" /></span>
-					
-						<span class="property-value" aria-labelledby="partner-label"><g:link controller="partner" action="show" id="${bankverbindungInstance?.partner?.id}">${bankverbindungInstance?.partner?.encodeAsHTML()}</g:link></span>
-					
+						<g:if test="${bankverbindungInstance.partner.instanceOf(org.strotmann.ontologies.partner.Person)}">
+							<span class="property-value" aria-labelledby="partner-label"><g:link controller="person" action="show" id="${bankverbindungInstance?.partner?.id}">${bankverbindungInstance?.partner?.encodeAsHTML()}</g:link></span>
+						</g:if>
+						<g:else test="${bankverbindungInstance.partner.instanceOf(org.strotmann.ontologies.partner.Organisation)}">
+							<span class="property-value" aria-labelledby="partner-label"><g:link controller="organisation" action="show" id="${bankverbindungInstance?.partner?.id}">${bankverbindungInstance?.partner?.encodeAsHTML()}</g:link></span>
+						</g:else>
 				</li>
 				</g:if>
 			
