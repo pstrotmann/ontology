@@ -88,18 +88,35 @@
 			<p>Dieses Programm liest eine in OWL spezifizierte Ontologie ein und erzeugt daraus Domainklassen für Grails.
 			aus diesen Domainklassen kann dann mit grails-generate-all eine Anwendung mit CRUD- Funktionalität erzeugt werden,
 			CRUD steht für Create, Retrieve, Update, Delete</p>
-		
-			<g:message code="OWL.import.code" default="generiere Domainklassen aus OWL"/>
+			<p>Außerdem erstellt das Programm eine Eingabedatei für das System GraphViz, das die erzeugte Anwendung
+			 als UML-Graph visualisiert</p>
+			<p>
+			<g:message code="OWL.import.code" default="generiere Domainklassen und graphViz Input aus OWL"/>
+			</p>
 			<g:uploadForm controller='GenDoms'>
  						<input type='file' name='file'/>
  						<input type='submit'/>
 			</g:uploadForm>
+			<p>
 			<g:if test="${flash.messageF}">
 				<div class="message">${flash.messageF}</div>
 			</g:if>
+			</p>
+			<p>
 			<g:if test="${flash.message1}">
 				<div class="message">${flash.message1}</div>
 			</g:if>
+			</p>
+			
+			<g:if test="${session.klassenNamen}">
+				<g:each in="${session.klassenNamen}" var="item">
+					<p><g:link controller="GenDoms" action="downloadGroovy" params='[klassenName: "${item}"]'>Download ${item}</g:link></p>
+				</g:each>
+			</g:if>
+			<g:if test="${session.gvInName}">
+				<p><g:link controller='GenDoms' action='downloadGraphViz'>GraphViz Input herunterladen</g:link></p>
+			</g:if>
+			
 			<h1>generiertes Partnersystem</h1>
 			<ul>
 				<li class="controller"><g:link controller="person">Person</g:link></li>
