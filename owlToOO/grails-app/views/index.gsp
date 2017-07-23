@@ -86,12 +86,12 @@
 		<div id="page-body" role="main">
 			<h1>Umsetzen OWL nach OO</h1>
 			<p>Dieses Programm liest eine in OWL spezifizierte Ontologie ein und erzeugt daraus Domainklassen für Grails.
-			aus diesen Domainklassen kann dann mit grails-generate-all eine Anwendung mit CRUD- Funktionalität erzeugt werden,
+			Aus diesen Domainklassen kann mit mit dem Grails- Kommando generate-all eine Anwendung mit CRUD- Funktionalität erzeugt werden.
 			CRUD steht für Create, Retrieve, Update, Delete</p>
 			<p>Außerdem erstellt das Programm eine Eingabedatei für das System GraphViz, das die erzeugte Anwendung
 			 als UML-Graph visualisiert</p>
 			<p>
-			<g:message code="OWL.import.code" default="generiere Domainklassen und graphViz Input aus OWL"/>
+			<g:message code="OWL.import.code" default="Generiere Domainklassen und graphViz- Input aus einer xxxx.owl - Datei"/>
 			</p>
 			<g:uploadForm controller='GenDoms'>
  						<input type='file' name='file'/>

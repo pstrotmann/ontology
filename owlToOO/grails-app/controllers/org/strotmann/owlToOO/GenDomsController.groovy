@@ -14,28 +14,20 @@ class GenDomsController {
 			return
 		}
 		
-		println "OntologieManager wird eröffnet"
 		OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
 		f.transferTo(new File(f.getOriginalFilename()))
 		File file = new File(f.getOriginalFilename())
 		// Now load the local copy
 		OWLOntology localOwl = manager.loadOntologyFromOntologyDocument(file)
-		flash.message1 = "geladene Ontology: " + localOwl
+		flash.message1 = localOwl
 		
 		//Einlesen der Axiome der Ontologie in eine Liste,
 		List klassen = klassenListe(localOwl)
-			
-		println "erzeugte Klassen in List/Map Darstellung"
-		klassen.each {
-			println it
-		}
-		
+					
 		//grails Input erstellen
-		println "Erzeuge je Klasse der Liste eine klassenname.groovy Datei"
 		session.klassenNamen = genGroovy(klassen)
 		
 		//graphViz Input erstellen
-		println "Erzeuge aus allen Klasser der Liste ein UML Klassendiagramm"
 		session.gvInName = fileName.replace(".owl", ".gv")
 		BufferedWriter gvIn = bufFile(session.gvInName)
 		genGraphviz(gvIn, klassen)
@@ -44,7 +36,6 @@ class GenDomsController {
 	}
 	
 	def downloadGroovy() {
-		println params
 		String klassenName = params.klassenName
 		downloadFile(klassenName)
 	}
@@ -412,8 +403,6 @@ class GenDomsController {
 	private List leseAxiome(OWLOntology o) {
 		
 		List l = []
-		println " "
-		println "${o.getAxiomCount()} Axiome"
 		o.getAxioms().each {OWLAxiom oA ->
 			l << oA
 		}
