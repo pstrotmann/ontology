@@ -24,13 +24,13 @@
 			<thead>
 					<tr>
 					
-						<g:sortableColumn property="postleitzahl" title="${message(code: 'adresse.postleitzahl.label', default: 'Postleitzahl')}" />
+						<g:sortableColumn property="hausnummer" title="${message(code: 'adresse.hausnummer.label', default: 'Hausnummer')}" />
 					
 						<g:sortableColumn property="ort" title="${message(code: 'adresse.ort.label', default: 'Ort')}" />
 					
-						<g:sortableColumn property="strasse" title="${message(code: 'adresse.strasse.label', default: 'Strasse')}" />
+						<g:sortableColumn property="postleitzahl" title="${message(code: 'adresse.postleitzahl.label', default: 'Postleitzahl')}" />
 					
-						<g:sortableColumn property="hausnummer" title="${message(code: 'adresse.hausnummer.label', default: 'Hausnummer')}" />
+						<g:sortableColumn property="strasse" title="${message(code: 'adresse.strasse.label', default: 'Strasse')}" />
 					
 						<g:sortableColumn property="hausnummerZusatz" title="${message(code: 'adresse.hausnummerZusatz.label', default: 'Hausnummer Zusatz')}" />
 					
@@ -40,13 +40,13 @@
 				<g:each in="${adresseInstanceList}" status="i" var="adresseInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${adresseInstance.id}">${fieldValue(bean: adresseInstance, field: "postleitzahl")}</g:link></td>
+						<td><g:link action="show" id="${adresseInstance.id}">${fieldValue(bean: adresseInstance, field: "hausnummer")}</g:link></td>
 					
 						<td>${fieldValue(bean: adresseInstance, field: "ort")}</td>
 					
-						<td>${fieldValue(bean: adresseInstance, field: "strasse")}</td>
+						<td>${fieldValue(bean: adresseInstance, field: "postleitzahl")}</td>
 					
-						<td>${fieldValue(bean: adresseInstance, field: "hausnummer")}</td>
+						<td>${fieldValue(bean: adresseInstance, field: "strasse")}</td>
 					
 						<td>${fieldValue(bean: adresseInstance, field: "hausnummerZusatz")}</td>
 					

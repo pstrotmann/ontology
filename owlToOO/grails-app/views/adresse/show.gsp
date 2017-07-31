@@ -23,11 +23,11 @@
 			</g:if>
 			<ol class="property-list adresse">
 			
-				<g:if test="${adresseInstance?.postleitzahl}">
+				<g:if test="${adresseInstance?.hausnummer}">
 				<li class="fieldcontain">
-					<span id="postleitzahl-label" class="property-label"><g:message code="adresse.postleitzahl.label" default="Postleitzahl" /></span>
+					<span id="hausnummer-label" class="property-label"><g:message code="adresse.hausnummer.label" default="Hausnummer" /></span>
 					
-						<span class="property-value" aria-labelledby="postleitzahl-label"><g:fieldValue bean="${adresseInstance}" field="postleitzahl"/></span>
+						<span class="property-value" aria-labelledby="hausnummer-label"><g:fieldValue bean="${adresseInstance}" field="hausnummer"/></span>
 					
 				</li>
 				</g:if>
@@ -41,6 +41,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${adresseInstance?.postleitzahl}">
+				<li class="fieldcontain">
+					<span id="postleitzahl-label" class="property-label"><g:message code="adresse.postleitzahl.label" default="Postleitzahl" /></span>
+					
+						<span class="property-value" aria-labelledby="postleitzahl-label"><g:fieldValue bean="${adresseInstance}" field="postleitzahl"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${adresseInstance?.strasse}">
 				<li class="fieldcontain">
 					<span id="strasse-label" class="property-label"><g:message code="adresse.strasse.label" default="Strasse" /></span>
@@ -50,20 +59,27 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${adresseInstance?.hausnummer}">
-				<li class="fieldcontain">
-					<span id="hausnummer-label" class="property-label"><g:message code="adresse.hausnummer.label" default="Hausnummer" /></span>
-					
-						<span class="property-value" aria-labelledby="hausnummer-label"><g:fieldValue bean="${adresseInstance}" field="hausnummer"/></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${adresseInstance?.hausnummerZusatz}">
 				<li class="fieldcontain">
 					<span id="hausnummerZusatz-label" class="property-label"><g:message code="adresse.hausnummerZusatz.label" default="Hausnummer Zusatz" /></span>
 					
 						<span class="property-value" aria-labelledby="hausnummerZusatz-label"><g:fieldValue bean="${adresseInstance}" field="hausnummerZusatz"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${adresseInstance?.partner}">
+				<li class="fieldcontain">
+					<span id="partner-label" class="property-label"><g:message code="adresse.partner.label" default="Partner" /></span>
+					
+						<g:each in="${adresseInstance.partner}" var="p">
+							<g:if test="${p.instanceOf(org.strotmann.ontologies.partner.Person)}">
+								<span class="property-value" aria-labelledby="person-label"><g:link controller="person" action="show" id="${p.id}">${p?.encodeAsHTML()}</g:link></span>
+							</g:if>
+							<g:if test="${p.instanceOf(org.strotmann.ontologies.partner.Organisation)}">
+								<span class="property-value" aria-labelledby="organisarion-label"><g:link controller="organisation" action="show" id="${p.id}">${p?.encodeAsHTML()}</g:link></span>
+							</g:if>
+						</g:each>
 					
 				</li>
 				</g:if>
