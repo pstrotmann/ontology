@@ -52,13 +52,13 @@ expressionOut.print(flash.message)
 printHtmlPart(11)
 }
 printHtmlPart(12)
-invokeTag('sortableColumn','g',27,['property':("postleitzahl"),'title':(message(code: 'adresse.postleitzahl.label', default: 'Postleitzahl'))],-1)
+invokeTag('sortableColumn','g',27,['property':("hausnummer"),'title':(message(code: 'adresse.hausnummer.label', default: 'Hausnummer'))],-1)
 printHtmlPart(13)
 invokeTag('sortableColumn','g',29,['property':("ort"),'title':(message(code: 'adresse.ort.label', default: 'Ort'))],-1)
 printHtmlPart(13)
-invokeTag('sortableColumn','g',31,['property':("strasse"),'title':(message(code: 'adresse.strasse.label', default: 'Strasse'))],-1)
+invokeTag('sortableColumn','g',31,['property':("postleitzahl"),'title':(message(code: 'adresse.postleitzahl.label', default: 'Postleitzahl'))],-1)
 printHtmlPart(13)
-invokeTag('sortableColumn','g',33,['property':("hausnummer"),'title':(message(code: 'adresse.hausnummer.label', default: 'Hausnummer'))],-1)
+invokeTag('sortableColumn','g',33,['property':("strasse"),'title':(message(code: 'adresse.strasse.label', default: 'Strasse'))],-1)
 printHtmlPart(13)
 invokeTag('sortableColumn','g',35,['property':("hausnummerZusatz"),'title':(message(code: 'adresse.hausnummerZusatz.label', default: 'Hausnummer Zusatz'))],-1)
 printHtmlPart(14)
@@ -69,15 +69,15 @@ printHtmlPart(15)
 expressionOut.print((i % 2) == 0 ? 'even' : 'odd')
 printHtmlPart(16)
 createTagBody(3, {->
-expressionOut.print(fieldValue(bean: adresseInstance, field: "postleitzahl"))
+expressionOut.print(fieldValue(bean: adresseInstance, field: "hausnummer"))
 })
 invokeTag('link','g',43,['action':("show"),'id':(adresseInstance.id)],3)
 printHtmlPart(17)
 expressionOut.print(fieldValue(bean: adresseInstance, field: "ort"))
 printHtmlPart(17)
-expressionOut.print(fieldValue(bean: adresseInstance, field: "strasse"))
+expressionOut.print(fieldValue(bean: adresseInstance, field: "postleitzahl"))
 printHtmlPart(17)
-expressionOut.print(fieldValue(bean: adresseInstance, field: "hausnummer"))
+expressionOut.print(fieldValue(bean: adresseInstance, field: "strasse"))
 printHtmlPart(17)
 expressionOut.print(fieldValue(bean: adresseInstance, field: "hausnummerZusatz"))
 printHtmlPart(18)
@@ -96,7 +96,7 @@ protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1500545456000L
+public static final long LAST_MODIFIED = 1501489257000L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'html'

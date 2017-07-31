@@ -57,11 +57,11 @@ expressionOut.print(flash.message)
 printHtmlPart(12)
 }
 printHtmlPart(13)
-if(true && (adresseInstance?.postleitzahl)) {
+if(true && (adresseInstance?.hausnummer)) {
 printHtmlPart(14)
-invokeTag('message','g',28,['code':("adresse.postleitzahl.label"),'default':("Postleitzahl")],-1)
+invokeTag('message','g',28,['code':("adresse.hausnummer.label"),'default':("Hausnummer")],-1)
 printHtmlPart(15)
-invokeTag('fieldValue','g',30,['bean':(adresseInstance),'field':("postleitzahl")],-1)
+invokeTag('fieldValue','g',30,['bean':(adresseInstance),'field':("hausnummer")],-1)
 printHtmlPart(16)
 }
 printHtmlPart(17)
@@ -73,19 +73,19 @@ invokeTag('fieldValue','g',39,['bean':(adresseInstance),'field':("ort")],-1)
 printHtmlPart(16)
 }
 printHtmlPart(17)
-if(true && (adresseInstance?.strasse)) {
+if(true && (adresseInstance?.postleitzahl)) {
 printHtmlPart(20)
-invokeTag('message','g',46,['code':("adresse.strasse.label"),'default':("Strasse")],-1)
+invokeTag('message','g',46,['code':("adresse.postleitzahl.label"),'default':("Postleitzahl")],-1)
 printHtmlPart(21)
-invokeTag('fieldValue','g',48,['bean':(adresseInstance),'field':("strasse")],-1)
+invokeTag('fieldValue','g',48,['bean':(adresseInstance),'field':("postleitzahl")],-1)
 printHtmlPart(16)
 }
 printHtmlPart(17)
-if(true && (adresseInstance?.hausnummer)) {
+if(true && (adresseInstance?.strasse)) {
 printHtmlPart(22)
-invokeTag('message','g',55,['code':("adresse.hausnummer.label"),'default':("Hausnummer")],-1)
+invokeTag('message','g',55,['code':("adresse.strasse.label"),'default':("Strasse")],-1)
 printHtmlPart(23)
-invokeTag('fieldValue','g',57,['bean':(adresseInstance),'field':("hausnummer")],-1)
+invokeTag('fieldValue','g',57,['bean':(adresseInstance),'field':("strasse")],-1)
 printHtmlPart(16)
 }
 printHtmlPart(17)
@@ -96,29 +96,57 @@ printHtmlPart(25)
 invokeTag('fieldValue','g',66,['bean':(adresseInstance),'field':("hausnummerZusatz")],-1)
 printHtmlPart(16)
 }
+printHtmlPart(17)
+if(true && (adresseInstance?.partner)) {
 printHtmlPart(26)
-createTagBody(2, {->
+invokeTag('message','g',73,['code':("adresse.partner.label"),'default':("Partner")],-1)
 printHtmlPart(27)
-createTagBody(3, {->
-invokeTag('message','g',74,['code':("default.button.edit.label"),'default':("Edit")],-1)
-})
-invokeTag('link','g',74,['class':("edit"),'action':("edit"),'resource':(adresseInstance)],3)
+for( p in (adresseInstance.partner) ) {
 printHtmlPart(28)
-invokeTag('actionSubmit','g',75,['class':("delete"),'action':("delete"),'value':(message(code: 'default.button.delete.label', default: 'Delete')),'onclick':("return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');")],-1)
+if(true && (p.instanceOf(org.strotmann.ontologies.partner.Person))) {
 printHtmlPart(29)
+createTagBody(5, {->
+expressionOut.print(p?.encodeAsHTML())
 })
-invokeTag('form','g',77,['url':([resource:adresseInstance, action:'delete']),'method':("DELETE")],2)
+invokeTag('link','g',77,['controller':("person"),'action':("show"),'id':(p.id)],5)
 printHtmlPart(30)
-})
-invokeTag('captureBody','sitemesh',79,[:],1)
+}
+printHtmlPart(28)
+if(true && (p.instanceOf(org.strotmann.ontologies.partner.Organisation))) {
 printHtmlPart(31)
+createTagBody(5, {->
+expressionOut.print(p?.encodeAsHTML())
+})
+invokeTag('link','g',80,['controller':("organisation"),'action':("show"),'id':(p.id)],5)
+printHtmlPart(30)
+}
+printHtmlPart(32)
+}
+printHtmlPart(33)
+}
+printHtmlPart(34)
+createTagBody(2, {->
+printHtmlPart(35)
+createTagBody(3, {->
+invokeTag('message','g',90,['code':("default.button.edit.label"),'default':("Edit")],-1)
+})
+invokeTag('link','g',90,['class':("edit"),'action':("edit"),'resource':(adresseInstance)],3)
+printHtmlPart(36)
+invokeTag('actionSubmit','g',91,['class':("delete"),'action':("delete"),'value':(message(code: 'default.button.delete.label', default: 'Delete')),'onclick':("return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');")],-1)
+printHtmlPart(37)
+})
+invokeTag('form','g',93,['url':([resource:adresseInstance, action:'delete']),'method':("DELETE")],2)
+printHtmlPart(38)
+})
+invokeTag('captureBody','sitemesh',95,[:],1)
+printHtmlPart(39)
 }
 public static final Map JSP_TAGS = new HashMap()
 protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1500545456000L
+public static final long LAST_MODIFIED = 1501490086000L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'html'
