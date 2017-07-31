@@ -245,11 +245,26 @@ class GenDomsController {
 		axiome.each {OWLAxiom oA ->
 			if (oA.getAxiomType().equals(AxiomType.SUBCLASS_OF))
 				subAxiome << oA
+			}
+		println "----------------"
+		println "subAxiome"
+		subAxiome.sort().each{
+			println it
 		}
 		List caAxiome = getClassAssertionAxioms(axiome)
+		println "----------------"
+		println "ClassAssertionAxioms"
+		caAxiome.sort().each{
+			println it
+		}
 
 		//Regel (i) zum Auffinden der Klassendeklarationen
 		List <OWLClassExpression> klassenDecls = bildeKlassenDecls (axiome)
+		println "----------------"
+		println "ClassDeclarationen"
+		klassenDecls.sort().each{
+			println it
+		}
 
 		klassenDecls.each {OWLClassExpression oE ->
 			String klName = oE.toString().split("#")[1].split(">")[0]
@@ -406,6 +421,9 @@ class GenDomsController {
 		o.getAxioms().each {OWLAxiom oA ->
 			l << oA
 		}
+		l.sort().each {
+			println it
+		}
 		l
 	}
 	
@@ -414,7 +432,12 @@ class GenDomsController {
 		List klassen = []
 		
 		List valueKlassen = bildeValueKlassen(axiome)
-						
+		println '-------------'
+		println 'value Klassen'
+		valueKlassen.sort().each {
+			println it
+		}
+		
 		axiome.each {OWLAxiom a ->
 			if	(a.toString().startsWith("Declaration(Class")) { 
 				boolean echteKlasse = true

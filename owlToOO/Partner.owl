@@ -186,6 +186,12 @@
     <owl:Class rdf:about="http://org.strotmann.ontologies.partner#Adresse">
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://org.strotmann.ontologies.partner#hat"/>
+                <owl:someValuesFrom rdf:resource="http://org.strotmann.ontologies.partner#Partner"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://org.strotmann.ontologies.partner#hausnummer"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
@@ -222,6 +228,7 @@
         <owl:disjointWith rdf:resource="http://org.strotmann.ontologies.partner#Bankverbindung"/>
         <owl:disjointWith rdf:resource="http://org.strotmann.ontologies.partner#Kommunikation"/>
         <owl:disjointWith rdf:resource="http://org.strotmann.ontologies.partner#Partner"/>
+        <owl:disjointWith rdf:resource="http://org.strotmann.ontologies.partner#Rolle"/>
     </owl:Class>
     
 
@@ -252,6 +259,7 @@
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://org.strotmann.ontologies.partner#Kommunikation"/>
         <owl:disjointWith rdf:resource="http://org.strotmann.ontologies.partner#Partner"/>
+        <owl:disjointWith rdf:resource="http://org.strotmann.ontologies.partner#Rolle"/>
     </owl:Class>
     
 
@@ -297,6 +305,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://org.strotmann.ontologies.partner#Partner"/>
+        <owl:disjointWith rdf:resource="http://org.strotmann.ontologies.partner#Rolle"/>
     </owl:Class>
     
 
@@ -375,6 +384,7 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://org.strotmann.ontologies.partner#Rolle"/>
         <owl:disjointWith rdf:resource="http://org.strotmann.ontologies.partner#ValueClasses"/>
     </owl:Class>
     

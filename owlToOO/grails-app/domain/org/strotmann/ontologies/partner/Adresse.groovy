@@ -1,16 +1,17 @@
 package org.strotmann.ontologies.partner
 class Adresse  {
-    Integer postleitzahl
-    String ort
-    String strasse
+    static hasMany=[partner:Partner]
     Integer hausnummer
+    String ort
+    Integer postleitzahl
+    String strasse
     String hausnummerZusatz
     static constraints = {
-      postleitzahl()
-      ort()
-      strasse()
       hausnummer()
+      ort()
+      postleitzahl()
+      strasse()
       hausnummerZusatz(nullable:true)
     }
-    String toString() {"${this.postleitzahl } ${this.ort } ${this.strasse } ${this.hausnummer }     "}
+    String toString() {"${this.hausnummer } ${this.ort } ${this.postleitzahl } ${this.strasse }     "}
 }

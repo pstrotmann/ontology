@@ -29,7 +29,7 @@ createTagBody(1, {->
 printHtmlPart(5)
 invokeTag('message','g',84,['code':("default.link.skip.label"),'default':("Skip to content&hellip;")],-1)
 printHtmlPart(6)
-invokeTag('message','g',94,['code':("OWL.import.code"),'default':("generiere Domainklassen und graphViz Input aus OWL")],-1)
+invokeTag('message','g',94,['code':("OWL.import.code"),'default':("Generiere Domainklassen und graphViz- Input aus einer xxxx.owl - Datei")],-1)
 printHtmlPart(7)
 createClosureForHtmlPart(8, 2)
 invokeTag('uploadForm','g',99,['controller':("GenDoms")],2)
@@ -94,7 +94,7 @@ protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1500815083000L
+public static final long LAST_MODIFIED = 1500833020000L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'html'
