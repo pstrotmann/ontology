@@ -473,6 +473,27 @@
     
 
 
+    <!-- http://org.strotmann.ontologies.partner#AdresseAmGulloh49 -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#AdresseAmGulloh49">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Adresse"/>
+        <hausnummer rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">49</hausnummer>
+        <ort>Dortmund</ort>
+        <postleitzahl rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">44339</postleitzahl>
+        <strasse>Am Gulloh</strasse>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#AdresseBochum -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#AdresseBochum">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Adresse"/>
+        <ort>Bochum</ort>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://org.strotmann.ontologies.partner#Angestellter -->
 
     <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Angestellter">
@@ -569,6 +590,14 @@
     
 
 
+    <!-- http://org.strotmann.ontologies.partner#FernuniversitätHagen -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#FernuniversitätHagen">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Organisation"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://org.strotmann.ontologies.partner#Festnetz -->
 
     <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Festnetz">
@@ -629,6 +658,18 @@
 
     <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Informationstechnik">
         <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Branche"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#JensLemanski -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#JensLemanski">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Person"/>
+        <hat rdf:resource="http://org.strotmann.ontologies.partner#AdresseBochum"/>
+        <hat rdf:resource="http://org.strotmann.ontologies.partner#RolleDozentAnFeruni"/>
+        <name>Lemanski</name>
+        <vorname>Jens</vorname>
     </owl:NamedIndividual>
     
 
@@ -709,6 +750,28 @@
 
     <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#Patient">
         <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Rollenname"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#PeterStrotmann -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#PeterStrotmann">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Person"/>
+        <gehoertZu rdf:resource="http://org.strotmann.ontologies.partner#Mann"/>
+        <hat rdf:resource="http://org.strotmann.ontologies.partner#AdresseAmGulloh49"/>
+        <geburtsdatum>06.01.1953</geburtsdatum>
+        <name>Strotmann</name>
+        <vorname>Peter</vorname>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://org.strotmann.ontologies.partner#RolleDozentAnFeruni -->
+
+    <owl:NamedIndividual rdf:about="http://org.strotmann.ontologies.partner#RolleDozentAnFeruni">
+        <rdf:type rdf:resource="http://org.strotmann.ontologies.partner#Rolle"/>
+        <gehoertZu rdf:resource="http://org.strotmann.ontologies.partner#FernuniversitätHagen"/>
     </owl:NamedIndividual>
     
 
